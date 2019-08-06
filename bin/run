@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: run <hostname> <port>"
+	exit 1
+fi
+
+cd src/icfp_rover
+make
+erl -pa ebin -noshell -run main main $1 $2

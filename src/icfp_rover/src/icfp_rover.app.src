@@ -1,0 +1,11 @@
+%% This is an -*- erlang -*- file.
+{application, icfp_rover, [
+	{description, "ICFP ROVER"},
+	{vsn, "%VSN%"},
+	{modules, [%MODULES%]},
+	{registered, []},
+	{applications, [kernel, stdlib]},
+	{mod, {icfp_client, []}},
+	{env, [{host, {127,0,0,1}}, {port, 1025}]}
+ ]
+}.
